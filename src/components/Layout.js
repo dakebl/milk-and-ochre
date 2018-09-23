@@ -11,7 +11,7 @@ const TemplateWrapper = ({ children }) => (
     <Navbar />
     <div>{children}</div>
     <div>
-      <Link to="/admin">Admin</Link>
+      <a href="https://milk-and-ochre.netlify.com/admin">Admin</a>
     </div>
   </div>
 )

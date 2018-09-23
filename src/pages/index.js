@@ -19,16 +19,17 @@ export default class IndexPage extends React.Component {
               .map(({ node: post }) => (
                 <div
                   className="content"
-                  style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+                  style={{ border: '1px solid #eaecee', padding: '2em 2em' }}
                   key={post.id}
                 >
                   <p>
                     <Link className="has-text-primary" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
+                    <br/>   
                     <small>{post.frontmatter.date}</small>
                   </p>
+                    <img src={post.frontmatter.featuredImage} alt=""/>
                   <p>
                     {post.excerpt}
                     <br />
@@ -70,7 +71,8 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM DD, YYYY"),
+            featuredImage
           }
         }
       }

@@ -1,11 +1,13 @@
 @import "~bulma/sass/utilities/initial-variables"
 
-// Config vars
-$kaldi-red: #FD461E
-$kaldi-red-invert: #fff
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+// Config vars
+$ochre: #CC7722
+$ochre-invert: #fff
+
+$primary: $ochre
+$primary-invert: $ochre-invert
 
 .content .taglist
   list-style: none
@@ -40,3 +42,21 @@ $primary-invert: $kaldi-red-invert
   margin-top: 0 !important
 
 @import "~bulma"
+
+
+.site-logo 
+  font-size: 20px; 
+  font-weight: bold;
+
+body
+  font-family: 'Montserrat', sans-serif;
+
+a
+  color: $ochre;
+
+.container
+  max-width: 960px;
+
+a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active
+  background-color: #fafafa;
+  color: $ochre;
